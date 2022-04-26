@@ -9,6 +9,8 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Spatie\Permission\Models\Role;
+use App\Models\Group;
+use App\Models\Subject;
 
 class RegisterController extends Controller
 {
@@ -31,6 +33,19 @@ class RegisterController extends Controller
      * @var string
      */
     protected $redirectTo = RouteServiceProvider::HOME;
+
+    /**
+     * Show the application registration form.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function showRegistrationForm()
+    {
+        $groups = Group::all();
+        $subjects = Subject::all();
+
+        return view('auth.register', compact('groups', 'subjects'));
+    }
 
     /**
      * Create a new controller instance.

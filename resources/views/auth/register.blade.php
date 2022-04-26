@@ -14,6 +14,10 @@
 @section('auth_header', __('adminlte::adminlte.register_message'))
 
 @section('auth_body')
+    <style>
+        .unselected {display: none;}
+    </style>
+    
     <form action="{{ $register_url }}" method="post">
         @csrf
 
