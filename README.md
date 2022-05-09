@@ -13,14 +13,14 @@ Backend project "Университет"
 
 ### Развертывание приложения:
 
--composer install
--npm install
+- composer install
+- npm install
 
 Создаем файл .env по примеру .env.example (При использовании функции "сброс пароля", необходимо прописать настройки почты).
 
 Создаем базу данных MySQL под названием university-lte
 
--php artisan storage:link
--php artisan migrate
--php artisan db:seed
--php artisan key:generate
+- php artisan storage:link
+- php artisan migrate
+- php artisan db:seed
+- php artisan key:generate
